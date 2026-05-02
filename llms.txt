@@ -1,0 +1,62 @@
+# Bielefeld
+
+> Geotechnical engineering company in Germany, providing professional services in soil mechanics, foundation engineering and site investigation.
+
+## Services
+- [Analyse Ungesattigter Boden](https://bielefeld.geotechnik.sbs/analyse-ungesattigter-boden/)
+- [Atterberg Grenzen](https://bielefeld.geotechnik.sbs/atterberg-grenzen/)
+- [Bemessung Geozellen](https://bielefeld.geotechnik.sbs/bemessung-geozellen/)
+- [Bemessung Schottersaulen](https://bielefeld.geotechnik.sbs/bemessung-schottersaulen/)
+- [Bemessung Vorbelastung Auflast](https://bielefeld.geotechnik.sbs/bemessung-vorbelastung-auflast/)
+- [Berechnung Des Sicherheitsfaktors](https://bielefeld.geotechnik.sbs/berechnung-des-sicherheitsfaktors/)
+- [Bewertung Bestehender Fahrbahnen](https://bielefeld.geotechnik.sbs/bewertung-bestehender-fahrbahnen/)
+- [Bewertung Quellfahigen Boden](https://bielefeld.geotechnik.sbs/bewertung-quellfahigen-boden/)
+- [Bodenerosionsanalyse](https://bielefeld.geotechnik.sbs/bodenerosionsanalyse/)
+- [Bodenmechanische Untersuchung](https://bielefeld.geotechnik.sbs/bodenmechanische-untersuchung/)
+- [Bodenstabilisierung Fur Straßen](https://bielefeld.geotechnik.sbs/bodenstabilisierung-fur-straßen/)
+- [Bodenverbesserung](https://bielefeld.geotechnik.sbs/bodenverbesserung/)
+- [Bodenverflussigungsanalyse](https://bielefeld.geotechnik.sbs/bodenverflussigungsanalyse/)
+- [Boschungsbruchanalyse](https://bielefeld.geotechnik.sbs/boschungsbruchanalyse/)
+- [Boschungsstabilitatsanalyse](https://bielefeld.geotechnik.sbs/boschungsstabilitatsanalyse/)
+- [Cbr Studie Fur Straßenentwurf](https://bielefeld.geotechnik.sbs/cbr-studie-fur-straßenentwurf/)
+- [Charakterisierung Residualboden](https://bielefeld.geotechnik.sbs/charakterisierung-residualboden/)
+- [Cone Penetration Test](https://bielefeld.geotechnik.sbs/cone-penetration-test/)
+- [Deep Soil Mixing](https://bielefeld.geotechnik.sbs/deep-soil-mixing/)
+- [Erdbebensichere Grundungsbemessung](https://bielefeld.geotechnik.sbs/erdbebensichere-grundungsbemessung/)
+- [Erkundung](https://bielefeld.geotechnik.sbs/erkundung/)
+- [Fahrbahnbau Untergrundbemessung](https://bielefeld.geotechnik.sbs/fahrbahnbau-untergrundbemessung/)
+- [Felddurchlassigkeitsversuch](https://bielefeld.geotechnik.sbs/felddurchlassigkeitsversuch/)
+- [Flachdilatometer Versuch](https://bielefeld.geotechnik.sbs/flachdilatometer-versuch/)
+- [Fundamente](https://bielefeld.geotechnik.sbs/fundamente/)
+- [Geogitter Spezifikation](https://bielefeld.geotechnik.sbs/geogitter-spezifikation/)
+- [Geotechnische Analyse Fur Tunnel](https://bielefeld.geotechnik.sbs/geotechnische-analyse-fur-tunnel/)
+- [Geotechnische Bemessung Tiefer Baugruben](https://bielefeld.geotechnik.sbs/geotechnische-bemessung-tiefer-baugruben/)
+- [Geotechnische Entwasserungsbemessung](https://bielefeld.geotechnik.sbs/geotechnische-entwasserungsbemessung/)
+- [Geotechnische Instrumentierung](https://bielefeld.geotechnik.sbs/geotechnische-instrumentierung/)
+- [Geotechnische Straßenentwasserung](https://bielefeld.geotechnik.sbs/geotechnische-straßenentwasserung/)
+- [Grundungen Schuttungen](https://bielefeld.geotechnik.sbs/grundungen-schuttungen/)
+- [Hange Wande](https://bielefeld.geotechnik.sbs/hange-wande/)
+- [In Situ Prufungen](https://bielefeld.geotechnik.sbs/in-situ-prufungen/)
+- [Labor](https://bielefeld.geotechnik.sbs/labor/)
+- [Labor Cbr Versuch](https://bielefeld.geotechnik.sbs/labor-cbr-versuch/)
+- [Labor Durchlassigkeitsversuch](https://bielefeld.geotechnik.sbs/labor-durchlassigkeitsversuch/)
+- [Mechanisch Stabilisierter Erdkorper](https://bielefeld.geotechnik.sbs/mechanisch-stabilisierter-erdkorper/)
+- [Normal Modifiziert](https://bielefeld.geotechnik.sbs/normal-modifiziert/)
+- [Odometer Konsolidationsversuch](https://bielefeld.geotechnik.sbs/odometer-konsolidationsversuch/)
+- [Pfahlanalyse Mantelreibung Vs Spitzendruck](https://bielefeld.geotechnik.sbs/pfahlanalyse-mantelreibung-vs-spitzendruck/)
+- [Sanierung Kontaminierter Boden](https://bielefeld.geotechnik.sbs/sanierung-kontaminierter-boden/)
+- [Schuttstromanalyse](https://bielefeld.geotechnik.sbs/schuttstromanalyse/)
+- [Seismik](https://bielefeld.geotechnik.sbs/seismik/)
+- [Seismische Mikrozonierung](https://bielefeld.geotechnik.sbs/seismische-mikrozonierung/)
+- [Spundwandbemessung](https://bielefeld.geotechnik.sbs/spundwandbemessung/)
+- [Stabilisierung Kalk Zement](https://bielefeld.geotechnik.sbs/stabilisierung-kalk-zement/)
+- [Standard Penetration Test](https://bielefeld.geotechnik.sbs/standard-penetration-test/)
+- [Standortantwortanalyse](https://bielefeld.geotechnik.sbs/standortantwortanalyse/)
+- [Straenbaugeotechnik](https://bielefeld.geotechnik.sbs/straenbaugeotechnik/)
+
+## Contact
+- Website: https://bielefeld.geotechnik.sbs/
+
+## About
+This page provides information about geotechnical engineering services available in Germany.
+The company complies with local and international standards including ASTM, ISO and country-specific norms.
