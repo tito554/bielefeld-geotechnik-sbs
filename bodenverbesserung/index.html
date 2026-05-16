@@ -206,6 +206,188 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 .crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
 .brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
+<style id="comprehensive-defaults-v1">
+/* Reset basico */
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin: 0; line-height: 1.6; color: #1E293B; background: #F8FAFC; }
+
+/* Layout wrapper */
+.layout, .main-wrapper, .content-area { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+.header, .main-header, header.main-header { background: #0F172A; color: #FFF; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+.header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.header-email { color: #FCD34D; text-decoration: none; }
+.brand, .brand-text, .brand-name { color: #FFFFFF; font-weight: 700; font-size: 1.25rem; line-height: 1.1; }
+.brand-city { color: #94A3B8; font-size: .85rem; display: block; }
+.brand-logo { display: inline-block; vertical-align: middle; }
+
+/* Breadcrumb / crumb */
+.crumb, .breadcrumb { padding: .5rem 0; font-size: .85rem; color: rgba(255,255,255,.85); }
+.crumb a, .breadcrumb a { color: #FFFFFF; text-decoration: underline; }
+.crumb a:hover, .breadcrumb a:hover { color: #FCD34D; }
+
+/* Body wrapper - layout flex */
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 1.5rem; margin: 1.5rem auto; padding: 0 1.5rem; max-width: 1280px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+/* Sidebar */
+.sb-home, .sidebar, aside { background: #1E293B; color: #FFFFFF; border-radius: 10px; padding: 1rem; }
+.sb-home a, .sidebar a, aside a { color: #FFFFFF; text-decoration: none; display: block; padding: .5rem .75rem; border-radius: 6px; transition: background .15s; }
+.sb-home a:hover, .sidebar a:hover { background: rgba(255,255,255,.08); }
+.cat-row, .cat-item { display: flex; align-items: center; justify-content: space-between; padding: .4rem .75rem; }
+.cat-name { color: #FFFFFF; font-weight: 500; flex: 1; }
+.cat-toggle, .cat-arrow { background: transparent; border: 0; color: #FFFFFF; cursor: pointer; padding: .2rem .4rem; }
+.cat-sub { padding-left: 1rem; }
+.cat-sub a { font-size: .85rem; color: rgba(255,255,255,.85); padding: .3rem .75rem; }
+
+/* Block / section base */
+.block { padding: 2rem 1.5rem; }
+.block > div { max-width: 1200px; margin: 0 auto; }
+.map-block { padding: 2rem 0; background: #F1F5F9; }
+.map-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+#mapa-ciudad { width: 100%; height: 380px; border-radius: 8px; }
+
+/* Cards / grid */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.card { background: #FFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 1.2rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,.04); transition: all .2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.08); border-color: #1D4ED8; }
+
+/* H1/H2 */
+h1 { color: #0F172A; font-size: 1.85rem; margin: 1rem 0 1.5rem; line-height: 1.2; }
+h2 { color: #1E293B; font-size: 1.35rem; margin: 1.5rem 0 .8rem; font-weight: 700; }
+h3 { color: #1E293B; font-size: 1.1rem; margin: 1rem 0 .5rem; }
+p { margin: 0 0 1rem; color: #374151; }
+a { color: #1D4ED8; }
+
+/* Mid CTA */
+.mid-cta { padding: 2rem 0; }
+.mid-cta > div { max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, #1D4ED815, #1D4ED808); border-left: 4px solid #1D4ED8; padding: 1.6rem 1.8rem; border-radius: 8px; text-align: center; }
+
+/* Footer */
+footer, .footer { background: #0F172A; color: #94A3B8; padding: 1.5rem; text-align: center; margin-top: 2rem; font-size: .85rem; }
+footer a, .footer a { color: #FCD34D; }
+
+/* Authority refs */
+.authority-refs { color: #94A3B8; font-size: .8rem; }
+.updated-info { color: #94A3B8; font-size: .8rem; font-style: italic; }
+</style>
+<style id="critical-visual-fix-v1">
+/* Sidebar: ancho 260px + adaptive font size */
+.sb-home, .sidebar, aside.sidebar, aside { width: 260px !important; }
+.sb-home .cat-row, .sidebar .cat-row, aside .cat-row, .nav-cat-row { font-size: .92rem; line-height: 1.25; }
+.sb-home .cat-name, .sidebar .cat-name, .cat-name { font-size: .92rem; line-height: 1.25; word-break: keep-all; hyphens: auto; }
+/* Labels muy largos: font-size más chico */
+.cat-name:where(:has(*)),
+.cat-row a, .nav-cat-link { white-space: normal; }
+
+/* Remover email sticky position:fixed (debe estar en flow del header) */
+.header-email[style*="position:fixed"],
+.header-email[style*="position: fixed"],
+a.header-email:where([href^="mailto:"]):not(footer a):not(.mid-cta a) { position: static !important; }
+header .header-email, header a[href^="mailto:"] { position: static !important; top: auto !important; right: auto !important; }
+
+/* Brand contrast: text-shadow para legibilidad */
+.brand, .brand-name, .brand-text, .logo-text, .main-header .brand {
+  text-shadow: 0 1px 3px rgba(0,0,0,.7);
+  color: #FFFFFF !important;
+}
+
+/* Header z-index alto (sobre map/content) */
+header, .header, .main-header, .top-header { position: relative; z-index: 100; }
+
+/* Map z-index bajo (debajo de navbar) */
+#mapa-ciudad, .map-block { z-index: 1; position: relative; }
+.leaflet-pane { z-index: 2; }
+
+/* Email contacto en navbar: contraste + visibilidad */
+.header-email, header .header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  font-weight: 500;
+}
+
+/* Servicios card grid: no incluir folders garbage */
+.cards-grid .card[href$="/css/"],
+.cards-grid .card[href$="/js/"],
+.cards-grid .card[href$="/img/"],
+.cards-grid .card[href$="/leaflet/"] { display: none !important; }
+
+/* Hero image santiago: contain en lugar de cover */
+.hero-bg, .hero-image { object-fit: contain; }
+</style>
+<style id="critical-fix-v2">
+/* Header NO sticky en sub layouts */
+header.main-header, header[role="banner"], body > header {
+  position: static !important;
+  top: auto !important;
+}
+/* Sidebar sticky, pero start después del header (más espacio) */
+.sb-home, aside.sidebar, .sidebar {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 5 !important;
+  width: 260px !important;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+/* Header z-index alto siempre */
+header.main-header, header[role="banner"], body > header {
+  z-index: 100 !important;
+  position: relative !important;
+}
+/* Sidebar font-size más chico en labels largos */
+.cat-name, .cat-row a, .nav-cat-link {
+  font-size: .88rem !important;
+  line-height: 1.2 !important;
+  hyphens: auto;
+  word-break: break-word;
+}
+/* Sidebar items NO superpongan header */
+.layout, .main-wrapper, .content-area { padding-top: 1rem; }
+/* Header altura mínima visible */
+header.main-header, header[role="banner"], body > header { min-height: 80px; }
+/* Brand SIEMPRE visible (no cortado) */
+.brand, .brand-name, .brand-text, .logo-text {
+  text-shadow: 0 1px 3px rgba(0,0,0,.8) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+/* Email contraste alto */
+.header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8) !important;
+  font-weight: 600;
+}
+</style>
+<style id="kill-sticky-header-v1">
+/* MATAR position:fixed legacy de fase-i-fixes */
+nav.navbar, .header-top, .main-header, header.header, .header {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+body { padding-top: 0 !important; }
+
+/* Sidebar sticky pero NO encima del header */
+.sb-home, aside.sidebar, .sidebar, aside {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 2 !important;
+  width: 260px !important;
+}
+
+/* Cards en grid: layout flex/grid sin colapsar */
+.cards-grid, [style*="display:grid"][style*="auto-fill"] {
+  margin-top: 1rem !important;
+}
+
+/* Layout main: padding-top para clearance */
+main, .main-content, .content-area, .layout > *:not(aside):not(.sidebar) {
+  padding-top: 0 !important;
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -213,7 +395,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
         <div class="logo-box">GE</div>
         <div class="logo-text">Geotechnik</div></a></div>
     <div class="nav">
-        <div class="nav-item has-dd"><a href="../erkundung/" class="nav-cat-link">Erkundung</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../cone-penetration-test/">CPT (Cone Penetration Test)</a><a href="../standard-penetration-test/">SPT (Standard Penetration Test)</a></div></div><div class="nav-item has-dd"><a href="../in-situ-prufungen/" class="nav-cat-link">In-Situ</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../flachdilatometer-versuch/">Flachdilatometer-Versuch (DMT)</a><a href="../felddurchlassigkeitsversuch/">Felddurchlässigkeitsversuch (Lefranc/Lugeon)</a></div></div><div class="nav-item has-dd"><a href="../labor/" class="nav-cat-link">Labor</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../charakterisierung-residualboden/">Charakterisierung von Residualböden</a><a href="../odometer-konsolidationsversuch/">Ödometer-Konsolidationsversuch</a><a href="../labor-cbr-versuch/">Labor-CBR-Versuch</a><a href="../normal-modifiziert/">Proctor-Versuch (Normal oder Modifiziert)</a><a href="../bodenmechanische-untersuchung/">Bodenmechanische Untersuchung</a><a href="../atterberg-grenzen/">Atterberg-Grenzen</a><a href="../labor-durchlassigkeitsversuch/">Labor-Durchlässigkeitsversuch (fallender/konstanter Druck)</a></div></div><div class="nav-item has-dd"><a href="../fundamente/" class="nav-cat-link">Fundamente</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../tragfahigkeitsanalyse/">Tragfähigkeitsanalyse</a><a href="../grundungen-schuttungen/">Gründungen auf Schüttungen (Analyse)</a><a href="../erdbebensichere-grundungsbemessung/">Erdbebensichere Gründungsbemessung</a><a href="../bewertung-quellfahigen-boden/">Bewertung von quellfähigen Böden</a><a href="../pfahlanalyse-mantelreibung-vs-spitzendruck/">Pfahlanalyse: Mantelreibung vs. Spitzendruck</a></div></div><div class="nav-item has-dd"><a href="../hange-wande/" class="nav-cat-link">Hänge</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../bodenerosionsanalyse/">Bodenerosionsanalyse</a><a href="../boschungsstabilitatsanalyse/">Böschungsstabilitätsanalyse</a><a href="../boschungsbruchanalyse/">Böschungsbruchanalyse</a><a href="../schuttstromanalyse/">Schuttstromanalyse</a><a href="../berechnung-des-sicherheitsfaktors/">Berechnung des Sicherheitsfaktors (FS)</a><a href="../bemessung-geozellen/">Bemessung mit Geozellen</a><a href="../stutzwandbemessung/">Stützwandbemessung</a><a href="../mechanisch-stabilisierter-erdkorper/">MSE-Wandbemessung (mechanisch stabilisierter Erdkörper)</a><a href="../spundwandbemessung/">Spundwandbemessung</a></div></div><div class="nav-item has-dd"><a href="../Bodenverb./" class="nav-cat-link">Bodenverb.</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../analyse-ungesattigter-boden/">Analyse ungesättigter Böden</a><a href="../bemessung-schottersaulen/">Bemessung von Schottersäulen (Stone Columns)</a><a href="../deep-soil-mixing/">Deep Soil Mixing (DSM) Bemessung</a><a href="../geotechnische-entwasserungsbemessung/">Geotechnische Entwässerungsbemessung</a><a href="../bemessung-vorbelastung-auflast/">Bemessung der Vorbelastung mit Auflast</a><a href="../geogitter-spezifikation/">Geogitter-Spezifikation</a><a href="../stabilisierung-kalk-zement/">Stabilisierung mit Kalk und Zement</a><a href="../geotechnische-instrumentierung/">Geotechnische Instrumentierung (Bemessung und Installation)</a><a href="../sanierung-kontaminierter-boden/">Sanierung kontaminierter Böden</a></div></div><div class="nav-item has-dd"><a href="../Tunnelbau/" class="nav-cat-link">Tunnelbau</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../geotechnische-analyse-fur-tunnel/">Geotechnische Analyse für Tunnel in weichem Boden</a><a href="../geotechnische-bemessung-tiefer-baugruben/">Geotechnische Bemessung tiefer Baugruben</a></div></div><div class="nav-item has-dd"><a href="../straenbaugeotechnik/" class="nav-cat-link">Straßenbau</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../geotechnische-straßenentwasserung/">Geotechnische Straßenentwässerung</a><a href="../bodenstabilisierung-fur-straßen/">Bodenstabilisierung für Straßen</a><a href="../cbr-studie-fur-straßenentwurf/">CBR-Studie für Straßenentwurf</a><a href="../bewertung-bestehender-fahrbahnen/">Bewertung bestehender Fahrbahnen</a><a href="../fahrbahnbau-untergrundbemessung/">Straßengeotechnik (Fahrbahnbau/Untergrundbemessung)</a></div></div><div class="nav-item has-dd"><a href="../seismik/" class="nav-cat-link">Seismik</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../bodenverflussigungsanalyse/">Bodenverflüssigungsanalyse</a><a href="../standortantwortanalyse/">Standortantwortanalyse</a><a href="../seismische-mikrozonierung/">Seismische Mikrozonierung</a></div></div>
+        <div class="nav-item has-dd"><a href="../erkundung/" class="nav-cat-link">Erkundung</a><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div><div class="nav-item has-dd"><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div><div class="nav-item has-dd"><a href="../labor/" class="nav-cat-link">Labor</a><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div><div class="nav-item has-dd"><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div><div class="nav-item has-dd"><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div><div class="nav-item has-dd"><a href="../Bodenverb./" class="nav-cat-link">Bodenverb.</a><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../bemessung-schottersaulen/">Bemessung von Schottersäulen (Stone Columns)</a></div></div><div class="nav-item has-dd"><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div><div class="nav-item has-dd"><button class="nav-arrow" type="button">▾</button><div class="dd"><a href="../geotechnische-straßenentwasserung/">Geotechnische Straßenentwässerung</a><a href="../bodenstabilisierung-fur-straßen/">Bodenstabilisierung für Straßen</a><a href="../cbr-studie-fur-straßenentwurf/">CBR-Studie für Straßenentwurf</a></div></div><div class="nav-item has-dd"><a href="../seismik/" class="nav-cat-link">Seismik</a><button class="nav-arrow" type="button">▾</button><div class="dd"></div></div>
         </div>
 </nav>
 
@@ -229,7 +411,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 <p>Die Methodik zur Planung einer Bodenverb. in Deutschland folgt einem streng standardisierten Prozess. Wir setzen auf eine Kombination aus direkten und indirekten Aufschlussverfahren. Zur Bestimmung der Lagerungsdichte und Tragfähigkeit in rolligen Böden kommt der <a href="/standard-penetration-test/">Standard Penetration Test (SPT)</a> nach DIN EN ISO 22476-3 zum Einsatz. In bindigen, oft setzungsempfindlichen Schichten liefert der <a href="/cone-penetration-test/">Cone Penetration Test (CPT)</a> gemäß DIN EN ISO 22476-1 eine hochauflösende Schichtabgrenzung. Ergänzend werden spezielle <a href="/in-situ-prufungen/">In-Situ</a> wie der <a href="/flachdilatometer-versuch/">Flachdilatometer-Versuch (DMT)</a> durchgeführt, um Spannungszustände und Steifigkeitsparameter zu ermitteln. Für die Dimensionierung von Dränagen oder Injektionen ist die Ermittlung der Wasserdurchlässigkeit über den <a href="/felddurchlassigkeitsversuch/">Felddurchlässigkeitsversuch (Lefranc/Lugeon)</a> unerlässlich.</p>
 <p>Typische Projekte in Bielefeld und Umgebung profitieren maßgeblich von diesen Untersuchungen. Bei der Erschließung von Neubaugebieten auf den Lösslehmdecken des Ravensberger Hügellandes müssen häufig setzungsarme Gründungspolster dimensioniert werden. Im Bereich der Altstadt und entlang der Teutoburger-Wald-Achse, wo verwitterte Tonsteine und Residualböden anstehen, ist die <a href="/charakterisierung-residualboden/">Charakterisierung von Residualböden</a> im Labor entscheidend. Nur durch die genaue Kenntnis des Verwitterungsgrades und der Mineralogie kann eine erfolgreiche Bodenverb., etwa durch Kalkstabilisierung, gewährleistet werden. Die Proben für diese Analysen werden fachgerecht in unserem geotechnischen <a href="/labor/">Labor</a> aufbereitet und geprüft.</p>
 <p>Unser Prozess beginnt mit einer spezifischen Untersuchungskampagne, gefolgt von der bodenmechanischen Bewertung und der Ausarbeitung eines Eignungsnachweises. Sie erhalten von uns einen prüffähigen Geotechnischen Bericht, der die verbesserten Boden</p></div></section>
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Verfügbare Leistungen</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../analyse-ungesattigter-boden/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Analyse ungesättigter Böden</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../bemessung-schottersaulen/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Bemessung von Schottersäulen (Stone Columns)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../deep-soil-mixing/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Deep Soil Mixing (DSM) Bemessung</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../geotechnische-entwasserungsbemessung/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Geotechnische Entwässerungsbemessung</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../bemessung-vorbelastung-auflast/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Bemessung der Vorbelastung mit Auflast</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../geogitter-spezifikation/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Geogitter-Spezifikation</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../stabilisierung-kalk-zement/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Stabilisierung mit Kalk und Zement</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../geotechnische-instrumentierung/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Geotechnische Instrumentierung (Bemessung und Installation)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../sanierung-kontaminierter-boden/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Sanierung kontaminierter Böden</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Verfügbare Leistungen</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../bemessung-schottersaulen/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Bemessung von Schottersäulen (Stone Columns)</h3><span style="font-size:.85rem;color:#666">→ Details ansehen</span></a></div></div></section>
 <section class="block mid-cta-558e-558e" style="padding:2rem 0">
       <div style="max-width:720px;margin:0 auto;background:linear-gradient(135deg,#EAB30815,#EAB30808);border-left:4px solid #EAB308;padding:1.5rem 1.8rem;border-radius:6px;text-align:center">
         <h3 style="margin:0 0 .4rem;font-size:1.15rem;color:#1E293B;text-align:center">Benötigen Sie eine geotechnische Bewertung?</h3>
@@ -266,7 +448,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
 <p>DIN 18196 – Erd- und Grundbau: Bodenklassifikation, DIN 4020 – Geotechnische Untersuchungen, Eurocode 7 (EN 1997-1:2004) – Entwurf, Berechnung und Bemessung, DIN 18 – Standard Test Methods for Determination of the Soil Water Characteristic Curve</p></section>
 
-<section class="section"><h2>Häufige Fragen</h2><details><summary>Warum ist die Analyse ungesättigter Böden in Bielefeld besonders wichtig?</summary><p>Bielefeld liegt im Übergangsbereich von Löss- und Tonböden. Diese reagieren stark auf Feuchte. Ohne die <a href="../grundungen-schuttungen/" data-interlink="1">Analyse</a> unterschätzen Sie Setzungen und Scherfestigkeitsverluste – besonders in Hanglagen oder bei Grundwasserabsenkungen.</p></details><details><summary>Welche Parameter werden bei der Analyse ungesättigter Böden gemessen?</summary><p>Wir messen die Saugspannung, den Wassergehalt, die ungesättigte Durchlässigkeit und die effektiven Spannungsparameter (c', φ'). Aus diesen Werten leiten wir die Bodenwasser-Kennlinie und die Scherfestigkeit unter ungesättigten Bedingungen ab.</p></details><details><summary>Wie lange dauert eine solche Untersuchung?</summary><p>Die Feldmessung dauert in der Regel 2 bis 4 Wochen, je nach Anzahl der Messstellen. Der Laborversuch ist in 1 bis 2 Wochen abgeschlossen. Die gesamte <a href="../grundungen-schuttungen/" data-interlink="1">Analyse</a> inklusive Bericht liegt nach 4 bis 6 Wochen vor.</p></details><details><summary>Kann die Analyse ungesättigter Böden auch bei Bestandsgebäuden helfen?</summary><p>Ja, sehr gut. Bei Rissen oder Setzungen an bestehenden Bauwerken ermitteln wir den aktuellen Feuchtezustand des Bodens. So lässt sich klären, ob die Schäden durch Sättigung oder Austrocknung entstanden sind – und welche Sanierung sinnvoll ist.</p></details></section>
+<section class="section"><h2>Häufige Fragen</h2><details><summary>Warum ist die Analyse ungesättigter Böden in Bielefeld besonders wichtig?</summary><p>Bielefeld liegt im Übergangsbereich von Löss- und Tonböden. Diese reagieren stark auf Feuchte. Ohne die  unterschätzen Sie Setzungen und Scherfestigkeitsverluste – besonders in Hanglagen oder bei Grundwasserabsenkungen.</p></details><details><summary>Welche Parameter werden bei der Analyse ungesättigter Böden gemessen?</summary><p>Wir messen die Saugspannung, den Wassergehalt, die ungesättigte Durchlässigkeit und die effektiven Spannungsparameter (c', φ'). Aus diesen Werten leiten wir die Bodenwasser-Kennlinie und die Scherfestigkeit unter ungesättigten Bedingungen ab.</p></details><details><summary>Wie lange dauert eine solche Untersuchung?</summary><p>Die Feldmessung dauert in der Regel 2 bis 4 Wochen, je nach Anzahl der Messstellen. Der Laborversuch ist in 1 bis 2 Wochen abgeschlossen. Die gesamte  inklusive Bericht liegt nach 4 bis 6 Wochen vor.</p></details><details><summary>Kann die Analyse ungesättigter Böden auch bei Bestandsgebäuden helfen?</summary><p>Ja, sehr gut. Bei Rissen oder Setzungen an bestehenden Bauwerken ermitteln wir den aktuellen Feuchtezustand des Bodens. So lässt sich klären, ob die Schäden durch Sättigung oder Austrocknung entstanden sind – und welche Sanierung sinnvoll ist.</p></details></section>
 
 
 
